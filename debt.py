@@ -1,4 +1,3 @@
-from typing import Coroutine
 from marvin import ai_fn
 from pathlib import Path
 from prefect import flow, task
@@ -14,7 +13,7 @@ async def analyze_data(data: dict) -> str:
 
 @task
 async def save_report(report: str, s3_key: Path):
-    aws_creds = AwsCredentials("sales-engineering-tpv-user")
+    AwsCredentials("sales-engineering-tpv-user")
 
     s3: S3Bucket = await S3Bucket.load("project-1-debt-data")
     await s3.write_path(path=f"output/{s3_key}", data=report)
@@ -26,7 +25,7 @@ async def debt(file_path: str):
     s3: S3Bucket = await S3Bucket.load("dbt-data")
     data: dict = await s3.read_path(path=file_path)
 
-    analysis = await analyze_data(data=data)
+    await analyze_data(data=data)
     await save_report()
 
 
