@@ -1,4 +1,4 @@
-# TPV Relay Project 1
+# TPV GTM Relay Project 1
 
 This repo contains Household debt data from the US Federal Reserve.
 
