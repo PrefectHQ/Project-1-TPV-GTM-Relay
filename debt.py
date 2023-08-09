@@ -23,7 +23,7 @@ async def save_report(report: str, s3_key: Path):
 
 @flow
 async def debt(file_path: str):
-    s3: S3Bucket = await S3Bucket.load("dbt-data")
+    s3: S3Bucket = await S3Bucket.load("project-1-debt-data")
     data: dict = await s3.read_path(path=file_path)
 
     analysis = await analyze_data(data=data)
