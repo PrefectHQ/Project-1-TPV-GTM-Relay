@@ -14,6 +14,11 @@ high		Upper bound of Debt-to-Income ratio category.
 Source: https://www.federalreserve.gov/releases/z1/dataviz/household_debt/
 
 
-Save your code to this repo for use by the next team. 
+PROJECT 1:
+    *resources
+        LOOK in region us-east-1
+        -Lambda function: tpv-project1 exists in region
+        -EventBridge rule s
+
 
 
